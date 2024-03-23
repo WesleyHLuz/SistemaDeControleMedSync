@@ -1,16 +1,26 @@
-﻿namespace SistemaDeControleMedSync.API.Model
+﻿using SistemaDeControleMedSync.API.Exceptions;
+
+namespace SistemaDeControleMedSync.API.ValueObject
 {
     public class Cpf
     {
-        public string Numero {  get; set; }
-
-        public bool Validar()
+        public string Numero { get; }
+        public Cpf(string numero)
         {
-            if (string.IsNullOrWhiteSpace(Numero))
+            if (!Validar(numero)) throw new DocumentoException("Número de documento inválido! Verifique e digite novamente");
+
+            Numero = numero;
+        }
+
+        private bool Validar(string valor)
+        {
+
+
+            if (string.IsNullOrWhiteSpace(valor))
                 return false;
 
             // Remove caracteres não numéricos
-            string cpfLimpo = new string(Numero.Where(char.IsDigit).ToArray());
+            string cpfLimpo = new string(valor.Where(char.IsDigit).ToArray());
 
             // Verifica se o CPF tem 11 dígitos
             if (cpfLimpo.Length != 11)
@@ -39,6 +49,7 @@
 
             // Verifica se os dígitos verificadores estão corretos
             return cpfArray[9] == digitoVerificador1 && cpfArray[10] == digitoVerificador2;
+
         }
     }
 }

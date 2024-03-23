@@ -1,22 +1,25 @@
-﻿using SistemaDeControleMedSync.API.Model;
+﻿using SistemaDeControleMedSync.API.Interfaces;
+using SistemaDeControleMedSync.API.ValueObject;
 
 namespace SistemaDeControleMedSync.API.Entities
 {
-    public class Cliente
+    public class Cliente : ICliente
     {
-        public int clienteId { get; set; }
+        
+        public int Id { get; set; }
 
-        public string NomeCompleto {  get; set; }
+        public string Nome {  get; set; }
+
+        public string Sobrenome { get; set; }
+
+        public string Endereco { get; set; }
 
         public Cpf Cpf { get; set; }
 
         public Email Email { get; set; }
+        public string Telefone { get; set; }
         
-        public string? NumCartaoSUS { get; set; }
-
         public Convenio? Convenio { get; set; }
-
         
-
     }
 }

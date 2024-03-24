@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeControleMedSync.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dcec9b38cc95e81d6463c1872a0a9b1cbb862b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+253376537ab05da84b11231e610213add8517243")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaDeControleMedSync.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeControleMedSync.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

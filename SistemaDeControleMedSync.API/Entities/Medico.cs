@@ -1,9 +1,11 @@
 ﻿using SistemaDeControleMedSync.API.Interfaces;
+using SistemaDeControleMedSync.API.ValueObject;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeControleMedSync.API.Entities
 {
-    public class Medico: IBaseModel
+    public class Medico: IPessoaFisica
     {
         [Key]
         public int Id { get; set; }
@@ -15,11 +17,27 @@ namespace SistemaDeControleMedSync.API.Entities
         public string Nome { get; set; }
 
         [Required]
-
         public string Crm { get; set; }
 
-        public ICollection<Especialidade> Especialidades { get; set; }
-
+        [Required]
         public Empresa Empresa { get; set; }
+
+        [Required]
+        public Cpf Cpf { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        [Phone]
+        public string Telefone { get; set; }
+
+        [Required]
+        [StringLength (100)]
+        public string Endereco { get; set; }
+
+        [Required]
+        [Column(TypeName = "varchar(50)")]
+        public Email Email { get; set; }
+
+        //public ICollection<Especialidade> Especialidades { get; set; }
     }
 }

@@ -5,27 +5,27 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace SistemaDeControleMedSync.API.Entities
 {
-    public class Cliente : ICliente
+    public class Cliente : IPessoaFisica
     {
         [Key]
         public int Id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public required string Nome {  get; set; }
+        public string Nome {  get; set; }
 
         [Required]
         [StringLength(50)]
-        public required string Sobrenome { get; set; }
+        public string Sobrenome { get; set; }
 
         [Required]
         [StringLength(100)]
-        public required string Endereco { get; set; }
+        public string Endereco { get; set; }
 
         [Required]
         [StringLength(11)]
         [DataType(DataType.Custom)]
-        public required Cpf Cpf { get; set; }
+        public Cpf Cpf { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -34,15 +34,15 @@ namespace SistemaDeControleMedSync.API.Entities
         [Required]
         [EmailAddress]
         [DataType(DataType.Custom)]
-        public required Email Email { get; set; }
+        public Email Email { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
         [Phone]
-        public required string Telefone { get; set; }
+        public string Telefone { get; set; }
 
-        [DataType(DataType.Custom)]
-        public Convenio? Convenio { get; set; }
+        
+        //public virtual Convenio? Convenio { get; set; }
         
     }
 }

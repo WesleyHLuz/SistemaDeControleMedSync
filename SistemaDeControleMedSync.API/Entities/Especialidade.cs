@@ -14,10 +14,10 @@ namespace SistemaDeControleMedSync.API.Entities
 
         // Adicionando referência para Empresa
         public int EmpresaId { get; set; }
-        public virtual Empresa Empresa { get; set; }
+        //public virtual Empresa Empresa { get; set; }
 
         // Relacionamento com Médico
-        public virtual ICollection<Medico> Medicos { get; set; }
+        //public virtual ICollection<Medico> Medicos { get; set; }
     }
 
 }

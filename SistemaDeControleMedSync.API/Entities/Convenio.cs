@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeControleMedSync.API.Entities
 {
-    public class Convenio : IEmpresa
+    public class Convenio : IPessoaJurica
     {
         [Key]
         public int Id { get; set; }

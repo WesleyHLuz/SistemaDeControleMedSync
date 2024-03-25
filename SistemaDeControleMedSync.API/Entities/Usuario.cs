@@ -22,10 +22,10 @@ namespace SistemaDeControleMedSync.API.Entities
         public string Senha { get; set; }
 
         // Relacionamento com Cliente (opcional)
-        public virtual Cliente Cliente { get; set; }
+        //public virtual Cliente Cliente { get; set; }
 
         // Relacionamento com Empresa (opcional)
-        public virtual Empresa Empresa { get; set; }
+       // public virtual Empresa Empresa { get; set; }
 
 
     }

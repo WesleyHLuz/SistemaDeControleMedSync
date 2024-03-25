@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeControleMedSync.API.Entities
 {
-    public class Empresa : IEmpresa
+    public class Empresa : IPessoaJurica
     {
         [Key]
         public int Id { get; set; }
@@ -33,10 +33,10 @@ namespace SistemaDeControleMedSync.API.Entities
         [Required]
         public Cnpj Cnpj { get; set; }
 
-        public virtual ICollection<Medico> Medicos { get; set; }
+       //public virtual ICollection<Medico> Medicos { get; set; }
 
-        public virtual ICollection<Especialidade> Especialidades { get; set;}
+       //public virtual ICollection<Especialidade> Especialidades { get; set;}
 
-        public virtual ICollection<Convenio> ConveniosAceitos { get; set;}
+       //public virtual ICollection<Convenio> ConveniosAceitos { get; set;}
     }
 }

@@ -2,7 +2,7 @@
 
 namespace SistemaDeControleMedSync.API.Interfaces
 {
-    public interface ICliente: IEntity
+    public interface IPessoaFisica: IEntity
     {
         Cpf Cpf { get; set; }
     }

@@ -4,6 +4,6 @@ namespace SistemaDeControleMedSync.API.Interfaces
 {
     public interface IEmailConfig
     {
-        Email Email { get; set; }
+        string Email { get; set; }
     }
 }

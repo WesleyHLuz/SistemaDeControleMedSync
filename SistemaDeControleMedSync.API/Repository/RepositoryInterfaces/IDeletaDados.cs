@@ -2,6 +2,6 @@
 {
     public interface IDeletaDados
     {
-        Task<bool> DeletaDados(int id);
+        Task<bool> Delete(int id);
     }
 }

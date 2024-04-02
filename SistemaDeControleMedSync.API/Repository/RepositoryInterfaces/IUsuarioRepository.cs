@@ -3,13 +3,13 @@ using SistemaDeControleMedSync.API.Interfaces;
 
 namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
 {
-    public interface IUsuarioRepository: IDeletaDados
+    public interface IUsuarioRepository: IDeletaDados, IValidaDados
     {
-        Task<Usuario> BuscaUsuarioPorId(int id);
-        Task<List<Usuario>> BuscaTodosUsuarios();
+        Task<Usuario> Get(int id);
+        Task<List<Usuario>> List();
 
-        Task<bool> AdicionaUsuario(IEntity entity);
+        Task<bool> Save(Usuario entity);
 
-        Task<bool> AtualizaSenhaUsuario(IEntity entidade, string senhaCriptografada);
+        Task<bool> Update(Usuario entidade);
     }
 }

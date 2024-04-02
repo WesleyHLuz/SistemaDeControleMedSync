@@ -6,6 +6,8 @@ namespace SistemaDeControleMedSync.API.ValueObject
     {
         public string Endereco { get; }
 
+        public Email() { }
+
         public Email(string endereco)
         {
             if (!Validar(endereco))

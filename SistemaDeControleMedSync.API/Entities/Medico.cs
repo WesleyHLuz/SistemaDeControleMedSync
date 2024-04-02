@@ -20,10 +20,10 @@ namespace SistemaDeControleMedSync.API.Entities
         public string Crm { get; set; }
 
         [Required]
-        public Empresa Empresa { get; set; }
+        public ICollection<Empresa> Empresa { get; set; }
 
         [Required]
-        public Cpf Cpf { get; set; }
+        public string Cpf { get; set; }
 
         [Required]
         [StringLength(20)]
@@ -36,8 +36,8 @@ namespace SistemaDeControleMedSync.API.Entities
 
         [Required]
         [Column(TypeName = "varchar(50)")]
-        public Email Email { get; set; }
+        public string Email { get; set; }
 
-        //public ICollection<Especialidade> Especialidades { get; set; }
+        public ICollection<Especialidade> Especialidades { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace SistemaDeControleMedSync.API.Entities
         [Required]
         [StringLength(11)]
         [DataType(DataType.Custom)]
-        public Cpf Cpf { get; set; }
+        public string Cpf { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -34,7 +34,7 @@ namespace SistemaDeControleMedSync.API.Entities
         [Required]
         [EmailAddress]
         [DataType(DataType.Custom)]
-        public Email Email { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
@@ -42,7 +42,7 @@ namespace SistemaDeControleMedSync.API.Entities
         public string Telefone { get; set; }
 
         
-        //public virtual Convenio? Convenio { get; set; }
+        public virtual Convenio? Convenio { get; set; }
         
     }
 }

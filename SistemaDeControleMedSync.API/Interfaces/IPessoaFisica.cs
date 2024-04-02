@@ -4,6 +4,6 @@ namespace SistemaDeControleMedSync.API.Interfaces
 {
     public interface IPessoaFisica: IEntity
     {
-        Cpf Cpf { get; set; }
+        string Cpf { get; set; }
     }
 }

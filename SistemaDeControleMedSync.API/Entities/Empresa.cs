@@ -19,7 +19,7 @@ namespace SistemaDeControleMedSync.API.Entities
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        public Email Email { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [StringLength(20)]
@@ -31,12 +31,12 @@ namespace SistemaDeControleMedSync.API.Entities
         public string Endereco { get; set; }
 
         [Required]
-        public Cnpj Cnpj { get; set; }
+        public string Cnpj { get; set; }
 
-       //public virtual ICollection<Medico> Medicos { get; set; }
+        public virtual ICollection<Medico> Medicos { get; set; }
 
-       //public virtual ICollection<Especialidade> Especialidades { get; set;}
+        public virtual ICollection<Especialidade> Especialidades { get; set;}
 
-       //public virtual ICollection<Convenio> ConveniosAceitos { get; set;}
+        public virtual ICollection<Convenio> ConveniosAceitos { get; set;}
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeControleMedSyncTeste")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4374300b69f95f1ca4c0277e7d71a19f2a625695")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4b6a9e29b4d23337c2360d852be7e491b32e581")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaDeControleMedSyncTeste")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeControleMedSyncTeste")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

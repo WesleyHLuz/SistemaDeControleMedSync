@@ -6,12 +6,12 @@ namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
 
     public interface IEspecialidadeRepository: IDeletaDados
     {
-        Task<Especialidade> BuscaEspecialidadePorId(int id);
-        Task<List<Especialidade>> BuscaTodasEspecialidades();
+        Task<Especialidade> Get(int id);
+        Task<List<Especialidade>> List();
 
-        Task<bool> AtualizaEspecialidade(int id, Especialidade especialidade);
+        Task<bool> Update(int id, Especialidade especialidade);
 
-        Task<bool> AdicionaEspecialidade(IBaseModel model);
+        Task<bool> Save(Especialidade model);
 
     }
 }

@@ -4,6 +4,7 @@ namespace SistemaDeControleMedSync.API.ValueObject
 {
     public class Cnpj
     {
+        public Cnpj() { }
         public string Numero { get; }
 
         public Cnpj(string numero)

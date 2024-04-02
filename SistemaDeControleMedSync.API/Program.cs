@@ -1,6 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using SistemaDeControleMedSync.API.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<DefaultContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("Padrao"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Padrao"))));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

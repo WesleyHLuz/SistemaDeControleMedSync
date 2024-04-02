@@ -11,33 +11,46 @@ namespace SistemaDeControleMedSync.API.Entities
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [Column(TypeName = "varchar(50)")]
+        public string NumeroConvenio {get; set;}
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Column(TypeName = "varchar(50)")]
         public string Nome { get; set; }
 
-        [Required]
-        public Empresa Empresa { get; set; }
+        
 
         [Required]
-        [StringLength(50)]
+        
+        [DataType(DataType.Text)]
+        [Column(TypeName = "varchar(50)")]
         public string Cobertura { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
-        public Cnpj Cnpj { get; set; }
+        [Column(TypeName = "varchar(50)")]
+        public string Cnpj { get; set; }
 
         [Required]
         [Phone]
-        [StringLength(20)]
+        [Column(TypeName = "varchar(50)")]
+        
         public string Telefone { get; set; }
 
         [Required]
         [EmailAddress]
         [DataType(DataType.EmailAddress)]
-        public Email Email { get; set; }
+        [Column(TypeName = "varchar(50)")]
+        public string Email { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [Column(TypeName = "varchar(50)")]
         public string Endereco { get; set; }
+
+        public virtual ICollection<Cliente> Clientes {get; set;}
+        public virtual ICollection<Empresa> Empresa { get; set; }
+
     }
 
 

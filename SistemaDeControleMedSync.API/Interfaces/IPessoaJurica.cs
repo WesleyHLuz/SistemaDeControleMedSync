@@ -4,6 +4,6 @@ namespace SistemaDeControleMedSync.API.Interfaces
 {
     public interface IPessoaJurica: IEntity
     {
-        Cnpj Cnpj { get; set; }
+        string Cnpj { get; set; }
     }
 }

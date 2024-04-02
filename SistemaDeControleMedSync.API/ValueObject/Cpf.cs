@@ -4,6 +4,7 @@ namespace SistemaDeControleMedSync.API.ValueObject
 {
     public class Cpf
     {
+        public Cpf() { }
         public string Numero { get; }
         public Cpf(string numero)
         {

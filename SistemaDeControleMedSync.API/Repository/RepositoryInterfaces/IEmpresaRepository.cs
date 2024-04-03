@@ -4,15 +4,15 @@ using SistemaDeControleMedSync.API.ValueObject;
 
 namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
 {
-    public interface IEmpresaRepository: IDeletaDados, IValidaDados
+    public interface IEmpresaRepository: IDeletaDados
     {
         Task<Empresa> Get(int id);
 
         Task<ICollection<Empresa>> List();
 
-        Task<bool> Save(Empresa dados);
+        Task<ValidationResult> Save(Empresa dados);
 
-        Task<bool> Update(int id, Empresa novosDados);
+        Task<ValidationResult> Update(int id, Empresa novosDados);
 
     }
 }

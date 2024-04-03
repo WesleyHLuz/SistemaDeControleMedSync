@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeControleMedSync.API")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeControleMedSyncTeste")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58cd8eb4249a953ea7102ccef0264862841f255d")]
-[assembly: System.Reflection.AssemblyProductAttribute("SistemaDeControleMedSync.API")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeControleMedSync.API")]
+[assembly: System.Reflection.AssemblyProductAttribute("SistemaDeControleMedSyncTeste")]
+[assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeControleMedSyncTeste")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

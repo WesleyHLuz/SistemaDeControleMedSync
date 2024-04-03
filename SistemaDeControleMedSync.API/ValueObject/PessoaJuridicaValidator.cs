@@ -1,27 +1,20 @@
 ﻿using SistemaDeControleMedSync.API.Exceptions;
+using SistemaDeControleMedSync.API.Services;
 
 namespace SistemaDeControleMedSync.API.ValueObject
 {
-    public class Cnpj
+    public class PessoaJuridicaValidator: ValidaDadosBasicos
     {
-        public Cnpj() { }
-        public string Numero { get; }
+        
 
-        public Cnpj(string numero)
-        {
-            if (!Validar(numero)) throw new DocumentoException("Número de documento inválido! Verifique e digite novamente");
-
-            Numero = numero;
-        }
-
-        private bool Validar(string valor)
+        public ValidationResult ValidaCnpj(string valor)
         {
             // Remove caracteres não numéricos do CNPJ
             string cnpjLimpo = new string(valor.Where(char.IsDigit).ToArray());
 
             // Verifica se o CNPJ tem 14 dígitos
             if (cnpjLimpo.Length != 14)
-                return false;
+                return new ValidationResult { IsValid = false, ErrorMessage = "O CNPJ deve conter 14 dígitos." };
 
             // Calcula o primeiro dígito verificador
             int[] multiplicadoresPrimeiroDigito = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -44,8 +37,13 @@ namespace SistemaDeControleMedSync.API.ValueObject
             int segundoDigitoVerificador = resto < 2 ? 0 : 11 - resto;
 
             // Verifica se os dígitos verificadores calculados são iguais aos dígitos verificadores fornecidos
-            return int.Parse(cnpjLimpo[12].ToString()) == primeiroDigitoVerificador &&
-                   int.Parse(cnpjLimpo[13].ToString()) == segundoDigitoVerificador;
+            if (int.Parse(cnpjLimpo[12].ToString()) != primeiroDigitoVerificador ||
+                int.Parse(cnpjLimpo[13].ToString()) != segundoDigitoVerificador)
+            {
+                return new ValidationResult { IsValid = false, ErrorMessage = "O CNPJ é inválido." };
+            }
+
+            return new ValidationResult { IsValid = true };
         }
     }
 }

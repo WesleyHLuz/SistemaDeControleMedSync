@@ -1,7 +1,9 @@
-﻿namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
+﻿using SistemaDeControleMedSync.API.ValueObject;
+
+namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
 {
     public interface IDeletaDados
     {
-        Task<bool> Delete(int id);
+        Task<ValidationResult> Delete(int id);
     }
 }

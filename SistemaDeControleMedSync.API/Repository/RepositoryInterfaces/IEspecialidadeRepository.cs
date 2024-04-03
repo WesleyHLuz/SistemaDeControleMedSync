@@ -1,5 +1,6 @@
 ﻿using SistemaDeControleMedSync.API.Entities;
 using SistemaDeControleMedSync.API.Interfaces;
+using SistemaDeControleMedSync.API.ValueObject;
 
 namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
 {
@@ -9,9 +10,9 @@ namespace SistemaDeControleMedSync.API.Repository.RepositoryInterfaces
         Task<Especialidade> Get(int id);
         Task<List<Especialidade>> List();
 
-        Task<bool> Update(int id, Especialidade especialidade);
+        Task<ValidationResult> Update(int id, Especialidade especialidade);
 
-        Task<bool> Save(Especialidade model);
+        Task<ValidationResult> Save(Especialidade model);
 
     }
 }
